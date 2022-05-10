@@ -6,16 +6,16 @@ void addEdge(int u,int v)
 {
   int s=sz[u]++;
   if(s>=2 && (s&(s-1))==0){
-    g[u]=(int *)realloc(g[u],s*2*sizeof *g[u]);
+    g[u]=(int *)realloc(g[u],s*2*sizeof *g[u]); /// reallocate memory for every node
   }
   g[u][s]=v;
 }
 int main()
 {
   int n,m;
-  scanf("%d%d",&n,&m);
+  scanf("%d%d",&n,&m); /// n=number of node,m=number of edge
   for(int i=0;i<=n;i++){
-    g[i]=(int *)malloc(2*sizeof *g[i]);
+    g[i]=(int *)malloc(2*sizeof *g[i]); /// memory allocate for every node
     sz[i]=0;
   }
   for(int i=0;i<m;i++){
