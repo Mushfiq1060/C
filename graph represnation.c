@@ -31,5 +31,9 @@ int main()
     }
     printf("\n");
   }
+  for(int i=0;i<=n;i++){
+    free(g[i]);
+    sz[i]=0;
+  }
   return 0;
 }
